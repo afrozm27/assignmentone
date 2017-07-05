@@ -1,0 +1,30 @@
+<div class="parent"> 
+  <p class="P">Parent Component </p>
+  <div class="container-fluid">
+	 <label class="labels">Name</label>
+	 <label  class="labels">Age</label>
+	 <label  class="labels">Email</label>
+  </div>
+
+	<div class="container-fluid">
+    <input class="inp" type="text" #text1 (keyup)="0">
+  	<input class="inp" type="text" #text2 (keyup)="0">
+  	<input class="inp" type="text" #text3 (keyup)="0" >
+  </div>
+
+
+  <div>
+    <p class="para">Name: {{name}}</p> 
+    <p class="para">Employee Id: {{age}}</p>
+    <p class="para">Email: {{Email}}</p>
+  </div>
+  <div>
+    <p class="para">Name: {{childValue}}</p> 
+    <p class="para">Employee Id: {{childValue1}}</p>
+    <p class="para">Email: {{childValue2}}</p> 
+   
+</div>
+
+<app-childcomponent [parentValue]="text1.value" [parentValue1]="text2.value" [parentValue2]="text3.value" 
+  (childChanged)="childValue = $event" (childChanged1)="childValue1 = $event" (childChanged2)="childValue2 = $event"></app-childcomponent>
+</div>

@@ -1,0 +1,23 @@
+<div class="child"> 
+  <p class="C">
+    Child Component 
+  </p>
+  <div class="container-fluid">
+    <label class="labels">Name </label>
+    <label  class="labels">Employee Id</label>
+    <label  class="labels">Email</label>
+  </div>
+
+  <div class="container-fluid">
+      <input class="inp" type="text" #childInput (keyup)="onChange(childInput.value)"> 
+      <input class="inp" type="text" #childInput1 (keyup)="onChange1(childInput1.value)">
+      <input class="inp" type="text" #childInput2 (keyup)="onChange2(childInput2.value)"> 
+  </div>
+
+  <p class="para">Name: {{parentValue}}</p>
+  <p class="para">Employee Id: {{parentValue1}}</p>
+  <p class="para">Email: {{parentValue2}}</p>
+  <button type="button">Enter</button>
+
+
+</div>
